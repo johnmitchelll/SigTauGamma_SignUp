@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <hta:application innerborder="no" /> -->
+
+  <title>Sig Tau Sign Up</title>
+  <link rel="icon" href="../stg.jpg" />
+
+  <link rel = "stylesheet" type = "text/css" href = "../Sigma Tau Gamma.css">
+</head>
+
+
+<style>
+
+@font-face {
+ font-family: customfont;
+ src: url('../font.otf');
+}
+
+*{
+  background: #121212;
+}
+
+.infoLabel {
+    color: rgb(230,42,35);
+  }
+
+</style>
+
+<body>
+
+  <div id="login">
+    <h1 class="infoLabel" id="signIn">Please Sign In</h1>
+
+    <h4 class="infoLabel" id="username">Username:</h4>
+    <input type="text" id="formUsername" class="info" placeholder="Username..." autocomplete="off">
+
+    <h4 class="infoLabel" id="password">Password:</h4>
+    <input type="text" id="formPassword" class="info" placeholder="Password..." autocomplete="off">
+
+    <button id="submit" onclick="checkUsernamePasswordCombo()">Submit</button>
+
+    <h1 class="infoLabel" id="signInStatus"></h1>
+  </div>
+
+  <!--  -->
+
+  <div id="body">
+    <h1 class="infoLabel" id="logo">Edit Site Content</h1>
+
+    <button id="submitContent" onclick="submitContent()">Submit New Content</button>
+    <h4 id="sumbitResult" class="infoLabel"></h4>
+
+    <div id="controls">
+
+      
+      <form class="fileInput" id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <h3 class="fileLabel">Top Left Image</h3>
+        <input class="myFiles" type="file" id="topLeft" accept="image/*"/>
+      </form>
+
+      
+      <form class="fileInput" id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <h3 class="fileLabel">Logo</h3>
+        <input class="myFiles" type="file" id="icon" accept="image/*"/>
+      </form>
+
+      
+      <form class="fileInput" id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <h3 class="fileLabel">Tilted Image</h3>
+        <input class="myFiles" type="file" id="tilting" accept="image/*"/>
+      </form>
+
+      
+      <form class="fileInput" id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <h3 class="fileLabel">Video</h3>
+        <input type="file" id="video" accept="video/*"/>
+      </form>
+
+      
+      <form class="fileInput" id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <h3 class="fileLabel">Rush Events</h3>
+        <input class="myFiles" type="file" id="rushEvents" accept="image/*"/>
+      </form>
+
+      
+      <form class="fileInput" id="uploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <h3 class="fileLabel">Bottom Image</h3>
+        <input class="myFiles" type="file" id="bottom" accept="image/*"/>
+      </form>
+
+
+      <div class="fileInput">
+        <h3 class="fileLabel">Primary Color</h3>
+
+        <div class="colorInfo">
+          <input class="fileLabel" id="primary" type="color">
+          <h5 class="infoLabel">Click Box To Select Color</h5>
+        </div>
+      </div>
+
+      <div class="fileInput">
+        <h3 class="fileLabel">Secondary Color</h3>
+
+        <div class="colorInfo">
+          <input class="fileLabel" id="secondary" type="color">
+          <h5 class="infoLabel">Click Box To Select Color</h5>
+        </div>
+      </div>
+
+      <div class="fileInput">
+        <h3 class="fileLabel">Background</h3>
+
+        <div class="colorInfo">
+          <input class="fileLabel" id="background" type="color">
+          <h5 class="infoLabel">Click Box To Select Color</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- <img id="testImg" height="200" alt="Image preview"> -->
+    <!-- <video id="testImg" controls autoplay> -->
+
+    <canvas id="canvas"></canvas>
+    <script src="./Main.js"></script>
+    <script src="./Scenes.js"></script>
+    <script src="./HTML.js"></script>
+    <script src="../js/ManageData.js"></script>
+    <script src="../js/Global.js"></script>
+    <script src="../js/Helpers.js"></script>
+
+  </div>
+
+</body>
+</hmtl>
+
+

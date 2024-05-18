@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <hta:application innerborder="no" /> -->
+
+  <title>Sig Tau Sign Up</title>
+  <link rel="icon" href="../stg.jpg" />
+
+  <link rel = "stylesheet" type = "text/css" href = "../Sigma Tau Gamma.css">
+</head>
+
+
+<style>
+
+@font-face {
+ font-family: customfont;
+ src: url('../font.otf');
+}
+
+  *{
+    background: #121212;
+  }
+
+  .infoLabel {
+    color: rgb(230,42,35);
+  }
+
+</style>
+
+<body>
+
+  <div id="login">
+    <h1 class="infoLabel" id="signIn">Please Sign In</h1>
+
+    <h4 class="infoLabel" id="username">Username:</h4>
+    <input type="text" id="formUsername" class="info" placeholder="Username..." autocomplete="off">
+
+    <h4 class="infoLabel" id="password">Password:</h4>
+    <input type="text" id="formPassword" class="info" placeholder="Password..." autocomplete="off">
+
+    <button id="submit" onclick="checkUsernamePasswordCombo()">Submit</button>
+
+    <h1 class="infoLabel" id="signInStatus"></h1>
+  </div>
+
+  <!--  -->
+
+  <div id="confirmation">
+    <h3 class="infoLabel" id="areYouSure">Are you Sure...</h3>
+    <button class="infoLabel button" id="goBack" onclick="endConfirmation()">Go Back</button>
+    <button class="infoLabel button" id="continue">Continue</button>
+  </div>
+
+  <!--  -->
+
+  <div id="body">
+    <h1 class="infoLabel" id="logo">Possible New Member Data Entries</h1>
+
+    <div id="controls">
+      <button class="infoLabel button" onclick="getDownloadFile()">Download</button>
+      <button class="infoLabel button" onclick="beginConfirmation('clearDB()')">Clear All</button>
+      <button class="infoLabel button" onclick="beginConfirmation('deleteSelected()')">Delete Selected Items</button>
+    </div>
+
+    <div id="textEntries"> 
+      
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <script src="./infoJs/Main.js"></script>
+    <script src="./infoJs/Scenes.js"></script>
+    <script src="./infoJs/HTML.js"></script>
+    <script src="../js/ManageData.js"></script>
+    <script src="../js/Global.js"></script>
+    <script src="../js/Helpers.js"></script>
+
+  </div>
+
+</body>
+</hmtl>
+
+
